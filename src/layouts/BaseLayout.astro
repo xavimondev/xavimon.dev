@@ -1,0 +1,22 @@
+---
+import BaseHead from '../components/SEO/BaseHead.astro';
+import Navbar from '../components/UI/Navbar.astro';
+import Footer from '../components/UI/Footer.astro';
+
+const { title,description,lang } = Astro.props;
+---
+
+<html lang={lang || 'en'}>
+	<head>
+		<BaseHead {title} {description}/>
+		<!-- <link rel="stylesheet" href={Astro.resolve('../styles/blog.css')} /> -->
+	</head>
+
+	<body class="dark:bg-slate-900 flex flex-col max-w-6xl mx-auto px-4 md:px-6">
+    <Navbar />
+		<div class="wrapper">
+			<slot />
+		</div>
+		<Footer />
+	</body>
+</html>

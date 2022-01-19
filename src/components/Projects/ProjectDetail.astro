@@ -1,0 +1,23 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  slug: string;
+}
+const { title,description,slug } = Astro.props;
+---
+
+<div class="transform hover:scale-[1.01] transition-all rounded-xl bg-gradient-to-r p-1 from-[#008f68] to-[#fae042]">
+  <div class="dark:bg-slate-900 rounded-lg overflow-hidden">
+    <img class="w-50 h-50" src="/images/testing.jpeg" alt="Mountain">
+    <div class="px-4 py-4">
+      <div class="text-xl text-white mb-4">{title}</div>
+      <p class="text-gray-400 text-sm">
+        {description}
+      </p>
+    </div>
+    <div class="px-4 pt-4 pb-2 float-right">
+      <a href="/" class="inline-block bg-gray-200 rounded-lg px-3 py-1 text-sm font-semibold text-gray-700 mb-2">Conocer más...</a>
+    </div>
+  </div>
+</div>  

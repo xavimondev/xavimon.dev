@@ -1,0 +1,28 @@
+---
+import Post from './Post.astro';
+const posts = [
+  {
+    id: 1,
+    title: 'new post 1',
+    description: 'new description 1',
+    slug: 'https//www.google.com'
+  },
+  {
+    id: 2,
+    title: 'new post 2',
+    description: 'new description 2',
+    slug: 'https//www.google.com'
+  },
+  {
+    id: 3,
+    title: 'new post 3',
+    description: 'new description 3',
+    slug: 'https//www.google.com'
+  }
+]
+---
+<section class="grid grid-cols-1">
+  {
+    posts.map(({title,description}) => <Post title={title} description={description} />)
+  }
+</section>

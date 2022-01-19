@@ -1,0 +1,46 @@
+---
+import ProjectDetail from './ProjectDetail.astro';
+const projects = [
+  {
+    id: 1,
+    title: 'new project 1',
+    description: 'new description 1',
+    slug: 'https//www.google.com'
+  },
+  {
+    id: 2,
+    title: 'new project 2',
+    description: 'new description 2',
+    slug: 'https//www.google.com'
+  },
+  {
+    id: 1,
+    title: 'new project 1',
+    description: 'new description 1',
+    slug: 'https//www.google.com'
+  },
+  {
+    id: 2,
+    title: 'new project 2',
+    description: 'new description 2',
+    slug: 'https//www.google.com'
+  },
+  {
+    id: 1,
+    title: 'new project 1',
+    description: 'new description 1',
+    slug: 'https//www.google.com'
+  },
+  {
+    id: 2,
+    title: 'new project 2',
+    description: 'new description 2',
+    slug: 'https//www.google.com'
+  }
+]
+---
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+  {
+    projects.map(({title,description,slug}) => <ProjectDetail title={title} description={description} slug={slug}/>)
+  }
+</div>

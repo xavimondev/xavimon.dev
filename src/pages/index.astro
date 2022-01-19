@@ -1,0 +1,26 @@
+---
+// Component Imports
+import BaseHead from '../components/SEO/BaseHead.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import Header from '../components/UI/Header.astro';
+
+import ListProjects from '../components/Projects/ListProjects.astro'
+
+const title = 'Bienvenido a mi espacio';
+const description = 'Personal blog and projects'
+---
+<html lang="en">
+<head>
+	<BaseHead {title} {description}/>
+	<link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
+</head>
+<body>
+	<BaseLayout {title} {description} lang='es'>
+		<Header title='Projects' description='Here...you will find out all my projects that I developed continually'/>
+		<main>
+			<ListProjects />
+		</main>
+	</BaseLayout>
+</body>
+</html>
