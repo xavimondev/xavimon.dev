@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+export async function getStaticPaths() {
+  return [
+    { params: { projectId: '1' } },
+    { params: { projectId: '2' } }
+  ];
+}
+const {projectId} = Astro.request.params;
+---
+
+<html lang="es">
+<head>
+	<link rel="stylesheet" href={Astro.resolve('../../styles/global.css')}>
+  <style>
+    .breadcrumb {
+      font-size: 14px;
+      padding: 0;
+      margin-bottom: 20px;
+      list-style: none;
+      border-radius: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb-item+.breadcrumb-item {
+      padding-left: 0.5rem;
+    }
+
+    .breadcrumb .breadcrumb-item.active {
+      color: #9faabb;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+      float: left;
+      padding-right: 0.5rem;
+      color: #6c757d;
+      content: "/";
+    } 
+  </style>
+</head>
+<body>
+	<BaseLayout title='Project 1' description='Project description 1' lang='es'>
+		<section class="">
+      <nav class="dark:text-white">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">3 Easy Ways To Make Your iPhone Faster</li>
+        </ol>
+      </nav>
+      <div class="flex flex-row">
+        <div class="max-w-3xl mr-4">
+          <h1 class="mb-4 text-3xl font-bold text-black md:text-4xl dark:text-white">Mi experiencia construyendo mi blog en Astro espero que todo este funcionando bien espero que</h1>
+          <p class="mb-4 text-sm text-gray-500 dark:text-gray-400">August 07, 2019 - 5 minutos de lectura</p>
+          <div class="w-full">
+            <div class="mb-8">
+              <img class="rounded-lg" src="/images/testing.jpeg" alt="img">
+            </div>
+            <div class="content">
+              <p>Una descripcion del proyecto en el que he trabajado</p>
+            </div>
+          </div>
+        </div>
+        <div class="project-details w-full">
+          <div class="dark:bg-slate-800 rounded-xl px-4 py-6 mb-6">
+            <h1 class="dark:text-white text-xl font-semibold mb-6">🔗 Enlaces</h1>
+            <span>Los siguientes enlaces</span>
+          </div>
+          <div class="dark:bg-slate-800 rounded-xl px-4 py-6 mb-6">
+            <h1 class="dark:text-white text-xl font-semibold mb-6">🚀 Stack</h1>
+            <span>Los siguientes enlaces</span>
+          </div>
+        </div>
+      </div>
+    </section>
+	</BaseLayout>
+</body>
+</html>
+
+

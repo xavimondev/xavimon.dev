@@ -1,5 +1,5 @@
 ---
-import ProjectDetail from './ProjectDetail.astro';
+import Project from './Project.astro';
 const projects = [
   {
     id: 1,
@@ -14,25 +14,25 @@ const projects = [
     slug: 'https//www.google.com'
   },
   {
-    id: 1,
+    id: 3,
     title: 'new project 1',
     description: 'new description 1',
     slug: 'https//www.google.com'
   },
   {
-    id: 2,
+    id: 4,
     title: 'new project 2',
     description: 'new description 2',
     slug: 'https//www.google.com'
   },
   {
-    id: 1,
+    id: 5,
     title: 'new project 1',
     description: 'new description 1',
     slug: 'https//www.google.com'
   },
   {
-    id: 2,
+    id: 6,
     title: 'new project 2',
     description: 'new description 2',
     slug: 'https//www.google.com'
@@ -41,6 +41,6 @@ const projects = [
 ---
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
   {
-    projects.map(({title,description,slug}) => <ProjectDetail title={title} description={description} slug={slug}/>)
+    projects.map(({title,description,slug}) => <Project title={title} description={description} slug={slug}/>)
   }
 </div>
