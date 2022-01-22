@@ -1,4 +1,6 @@
 ---
+import GitHubIcon from '../../../public/assets/svg/github-dark.svg';
+
 export interface Props {
   title: string;
   description: string;
@@ -16,8 +18,11 @@ const { title,description,slug } = Astro.props;
         {description}
       </p>
     </div>
-    <div class="px-4 pt-4 pb-2 float-right">
-      <a href="/details/2" class="inline-block bg-gray-200 rounded-lg px-3 py-1 text-sm font-semibold text-gray-700 mb-2">Conocer más...</a>
+    <div class="flex flex-row justify-between px-4 pt-4 pb-2">
+      <a class="inline-block" href="https://github.com/d3vcloud/trivia-app" target="_blank">
+        <img src={GitHubIcon} alt="repository-link" width="25" height="25">
+      </a>
+      <a href="/details/2" class="inline-block bg-gray-200 rounded-lg px-3 py-1 text-sm font-semibold text-gray-700 mb-2">Conocer más</a>
     </div>
   </div>
 </div>  

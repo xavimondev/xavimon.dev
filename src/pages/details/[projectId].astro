@@ -1,5 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
+import GitHubIcon from '../../../public/assets/svg/github.svg';
+import JavascriptIcon from '../../../public/assets/svg/javascript.svg';
+import AstroIcon from '../../../public/assets/svg/astro.svg';
+import CSSIcon from '../../../public/assets/svg/css.svg';
 
 export async function getStaticPaths() {
   return [
@@ -13,63 +17,58 @@ const {projectId} = Astro.request.params;
 <html lang="es">
 <head>
 	<link rel="stylesheet" href={Astro.resolve('../../styles/global.css')}>
-  <style>
-    .breadcrumb {
-      font-size: 14px;
-      padding: 0;
-      margin-bottom: 20px;
-      list-style: none;
-      border-radius: 0;
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .breadcrumb-item+.breadcrumb-item {
-      padding-left: 0.5rem;
-    }
-
-    .breadcrumb .breadcrumb-item.active {
-      color: #9faabb;
-    }
-
-    .breadcrumb-item+.breadcrumb-item::before {
-      float: left;
-      padding-right: 0.5rem;
-      color: #6c757d;
-      content: "/";
-    } 
-  </style>
+	<link rel="stylesheet" href={Astro.resolve('../../styles/detail.css')}>
 </head>
 <body>
 	<BaseLayout title='Project 1' description='Project description 1' lang='es'>
-		<section class="">
+		<section>
       <nav class="dark:text-white">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">3 Easy Ways To Make Your iPhone Faster</li>
+          <li class="breadcrumb-item hover:text-amber-400"><a href="/">Home</a></li>
+          <li class="breadcrumb-item dark:text-gray-400" aria-current="page">Un titulo breve del proyecto</li>
         </ol>
       </nav>
       <div class="flex flex-row">
-        <div class="max-w-3xl mr-4">
-          <h1 class="mb-4 text-3xl font-bold text-black md:text-4xl dark:text-white">Mi experiencia construyendo mi blog en Astro espero que todo este funcionando bien espero que</h1>
-          <p class="mb-4 text-sm text-gray-500 dark:text-gray-400">August 07, 2019 - 5 minutos de lectura</p>
-          <div class="w-full">
-            <div class="mb-8">
-              <img class="rounded-lg" src="/images/testing.jpeg" alt="img">
-            </div>
-            <div class="content">
-              <p>Una descripcion del proyecto en el que he trabajado</p>
-            </div>
+        <div class="w-9/12 mr-2">
+          <h1 class="mb-6 text-3xl font-bold text-black md:text-4xl dark:text-white">Mi experiencia construyendo mi blog en Astro espero que todo este funcionando bien espero que</h1>
+          <div class="flex flex-row mb-2">
+            <a href="https://github.com/d3vcloud/trivia-app" target="_blank" class="mr-3">
+              <img src={GitHubIcon} alt="repository-link" width="25" height="25">
+            </a>
+            <p class="mb-4 text-sm text-gray-500 dark:text-gray-400">August 07, 2019 - 5 minutos de lectura</p>
+          </div>
+          <div class="content">
+            <p class="text-lg text-black dark:text-slate-100">
+              Una descripcion del proyecto en el que he trabajado, ademas debe ir todo completo con la description del texto, ademas
+              debemos completar los siguientes recursos que mas tenemos
+            </p>
           </div>
         </div>
-        <div class="project-details w-full">
+        <div class="w-3/12">
           <div class="dark:bg-slate-800 rounded-xl px-4 py-6 mb-6">
-            <h1 class="dark:text-white text-xl font-semibold mb-6">🔗 Enlaces</h1>
-            <span>Los siguientes enlaces</span>
+            <h1 class="dark:text-white text-xl font-semibold mb-6 ">🔗 Visita el proyecto</h1>
+            <a href="https://triviafun.netlify.app" target="_blank" class="container-image">
+              <img src="../../images/testing.jpeg" alt="triviafun" class="image">
+            </a>
           </div>
           <div class="dark:bg-slate-800 rounded-xl px-4 py-6 mb-6">
             <h1 class="dark:text-white text-xl font-semibold mb-6">🚀 Stack</h1>
-            <span>Los siguientes enlaces</span>
+            <!-- <a href="https://github.com/" class="inline-flex bg-gray-100 rounded-2xl px-4 py-1 font-semibold mb-2 text-black">
+              <img src={GitHubIcon} alt="github" width="25" height="25" class="mr-2"/> 
+              <span class="text-base">GitHub</span>
+            </a> -->
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="inline-flex bg-gray-100 rounded-2xl px-4 py-1 font-semibold text-black mb-2" target="_blank">
+              <img src={JavascriptIcon} alt="github" width="25" height="25" class="mr-2"/> 
+              <span class="text-base ">Javascript</span>
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="inline-flex bg-gray-100 rounded-2xl px-4 py-1 font-semibold text-black mb-2">
+              <img src={CSSIcon} alt="github" width="15" height="25" class="mr-2"/> 
+              <span class="text-base ">CSS</span>
+            </a>
+            <a href="https://docs.astro.build/" class="inline-flex bg-gray-100 rounded-2xl px-4 py-1 font-semibold text-black">
+              <img src={AstroIcon} alt="github" width="25" height="25" class="mr-2"/> 
+              <span class="text-base">Astro</span>
+            </a>
           </div>
         </div>
       </div>
