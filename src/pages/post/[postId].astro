@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+export async function getStaticPaths() {
+  return [
+    { params: { postId: '1' } },
+    { params: { postId: '2' } }
+  ];
+}
+const {postId} = Astro.request.params;
+---
+
+<html lang="es">
+<head>
+	<link rel="stylesheet" href={Astro.resolve('../../styles/global.css')}>
+</head>
+<body>
+	<BaseLayout title='Como empece mi blog desde cero' description='Project description 1' lang='es'>
+		<section>
+      <nav class="dark:text-white">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item hover:text-amber-400"><a href="/">Home</a></li>
+          <li class="breadcrumb-item dark:text-gray-400" aria-current="page">Un titulo breve del proyecto</li>
+        </ol>
+      </nav>
+      <div class="flex flex-row">
+        <div class="w-full">
+          <h1 class="mb-6 text-3xl font-bold text-black md:text-4xl dark:text-white">Mi experiencia construyendo mi blog en Astro espero que todo este funcionando bien espero que</h1>
+          <div class="flex flex-row mb-2">
+            <p class="mb-4 text-base text-gray-500 dark:text-gray-400">August 07, 2019 - 5 minutos de lectura</p>
+          </div>
+          <div class="content">
+            <p class="text-lg text-black dark:text-slate-100">
+              Una descripcion del proyecto en el que he trabajado, ademas debe ir todo completo con la description del texto, ademas
+              debemos completar los siguientes recursos que mas tenemos
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+	</BaseLayout>
+</body>
+</html>
+
+

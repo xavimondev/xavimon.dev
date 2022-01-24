@@ -17,7 +17,29 @@ const {projectId} = Astro.request.params;
 <html lang="es">
 <head>
 	<link rel="stylesheet" href={Astro.resolve('../../styles/global.css')}>
-	<link rel="stylesheet" href={Astro.resolve('../../styles/detail.css')}>
+  <style>
+    .img-wrapper {
+      position: relative;
+      /* overflow: hidden; */
+    }
+    
+    .img-wrapper > .content::after {
+      position: absolute;
+      content: url('../../public/assets/svg/icon-view.svg');
+      inset: 0;
+      background-color: hsla(178, 100%, 50%, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.5s;
+      opacity: 0;
+    }
+
+    .img-wrapper:hover > .content::after {
+      opacity: 1;
+    }
+
+  </style>
 </head>
 <body>
 	<BaseLayout title='Project 1' description='Project description 1' lang='es'>
@@ -35,7 +57,7 @@ const {projectId} = Astro.request.params;
             <a href="https://github.com/d3vcloud/trivia-app" target="_blank" class="mr-3">
               <img src={GitHubIcon} alt="repository-link" width="25" height="25">
             </a>
-            <p class="mb-4 text-sm text-gray-500 dark:text-gray-400">August 07, 2019 - 5 minutos de lectura</p>
+            <p class="mb-4 text-base text-gray-500 dark:text-gray-400">August 07, 2019 - 5 minutos de lectura</p>
           </div>
           <div class="content">
             <p class="text-lg text-black dark:text-slate-100">
@@ -48,7 +70,10 @@ const {projectId} = Astro.request.params;
           <div class="dark:bg-slate-800 rounded-xl px-4 py-6 mb-6">
             <h1 class="dark:text-white text-xl font-semibold mb-6 ">🔗 Visita el proyecto</h1>
             <a href="https://triviafun.netlify.app" target="_blank" class="container-image">
-              <img src="../../images/testing.jpeg" alt="triviafun" class="image">
+              <div class="img-wrapper">
+                <img src="../../images/testing.jpeg" alt="triviafun">
+                <div class="content"></div>
+              </div>
             </a>
           </div>
           <div class="dark:bg-slate-800 rounded-xl px-4 py-6 mb-6">

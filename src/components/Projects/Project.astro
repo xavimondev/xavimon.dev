@@ -1,5 +1,6 @@
 ---
 import GitHubIcon from '../../../public/assets/svg/github-dark.svg';
+import '../../styles/project.css';
 
 export interface Props {
   title: string;
@@ -11,7 +12,12 @@ const { title,description,slug } = Astro.props;
 <!-- bg-gradient-to-r p-1 from-[#008f68] to-[#fae042] -->
 <div class="transform hover:scale-[1.01] transition-all rounded-xl">
   <div class="dark:bg-slate-800 rounded-lg overflow-hidden">
-    <img class="w-50 h-50" src="/images/testing.jpeg" alt="Mountain">
+    <a href="https://triviafun.netlify.app" target="_blank">
+      <div class="img-wrapper">
+        <img class="w-50 h-50" src="/images/testing.jpeg" alt="Mountain">
+        <div class="content"></div>
+      </div>
+    </a>
     <div class="px-4 py-4">
       <div class="text-xl text-white mb-4">{title}</div>
       <p class="text-gray-400 text-sm">
