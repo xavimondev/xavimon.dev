@@ -1,5 +1,6 @@
 ---
-import GitHubIcon from '../../../public/assets/svg/github-dark.svg';
+import GitHubIconDark from '../../../public/assets/svg/github-dark.svg';
+import GitHubIcon from '../../../public/assets/svg/github.svg';
 import '../../styles/project.css';
 
 export interface Props {
@@ -7,11 +8,13 @@ export interface Props {
   description: string;
   slug: string;
 }
+
 const { title,description,slug } = Astro.props;
 ---
-<!-- bg-gradient-to-r p-1 from-[#008f68] to-[#fae042] -->
+<!-- bg-gradient-to-r p-1 from-[#008f68] to-[#fae042] 
+-->
 <div class="transform hover:scale-[1.01] transition-all rounded-xl">
-  <div class="dark:bg-slate-800 rounded-lg overflow-hidden">
+  <div class="bg-emerald-400 dark:bg-slate-800 rounded-lg overflow-hidden">
     <a href="https://triviafun.netlify.app" target="_blank">
       <div class="img-wrapper">
         <img class="w-50 h-50" src="/images/testing.jpeg" alt="Mountain">
@@ -19,9 +22,9 @@ const { title,description,slug } = Astro.props;
       </div>
     </a>
     <div class="px-4 py-4">
-      <div class="text-xl text-white mb-4">{title}</div>
-      <p class="text-gray-400 text-sm">
-        {description}
+      <div class="text-xl text-black dark:text-white mb-4 font-semibold">{title}</div>
+      <p class="text-gray-900 dark:text-gray-400 text-sm">
+        prueba de una description que tiene contenido muy amplio espero que no este saliendose el limite
       </p>
     </div>
     <div class="flex flex-row justify-between px-4 pt-4 pb-2">
