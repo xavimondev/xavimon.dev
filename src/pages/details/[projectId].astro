@@ -49,8 +49,8 @@ const {projectId} = Astro.request.params;
           <li class="breadcrumb-item dark:text-gray-400" aria-current="page">Un titulo breve del proyecto</li>
         </ol>
       </nav>
-      <div class="flex flex-row">
-        <div class="w-9/12 mr-2">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div class="lg:col-span-3">
           <h1 class="mb-6 text-3xl font-bold text-black md:text-4xl dark:text-white">Mi experiencia construyendo mi blog en Astro espero que todo este funcionando bien espero que</h1>
           <div class="flex flex-row mb-2">
             <a href="https://github.com/d3vcloud/trivia-app" target="_blank" class="mr-3">
@@ -60,19 +60,40 @@ const {projectId} = Astro.request.params;
           </div>
           <div class="content">
             <p class="text-lg text-black dark:text-slate-100">
-              Una descripcion del proyecto en el que he trabajado, ademas debe ir todo completo con la description del texto, ademas
-              debemos completar los siguientes recursos que mas tenemos
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam blanditiis a quae numquam iste ab incidunt doloremque 
+              ullam nesciunt delectus aliquam explicabo porro totam nam et adipisci, quo magnam! Aspernatur.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam blanditiis a quae numquam iste ab incidunt doloremque 
+              ullam nesciunt delectus aliquam explicabo porro totam nam et adipisci, quo magnam! Aspernatur.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam blanditiis a quae numquam iste ab incidunt doloremque 
+              ullam nesciunt delectus aliquam explicabo porro totam nam et adipisci, quo magnam! Aspernatur.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, reprehenderit placeat. Nemo repellat, iusto ratione sint facere, quod, quasi illum pariatur odit eum iure. Quod reprehenderit aliquid commodi? Labore, recusandae.
+              Repellat culpa ipsum, doloribus quis nostrum cupiditate deserunt, dignissimos expedita ipsam enim iusto impedit? Mollitia et exercitationem ad laudantium vel sint quis alias dicta. Ipsum illo error ipsam natus quos?
+              Laudantium incidunt aut, porro ex consectetur obcaecati nostrum architecto praesentium amet soluta fugiat. Aut odit quia, saepe minus minima similique neque incidunt sed error voluptas molestiae quas et iusto! Consequuntur.
+              Laudantium voluptas dolorum rerum, sit corrupti maiores dolorem iusto libero magni reiciendis hic, commodi magnam, neque aliquid temporibus culpa suscipit mollitia ab numquam nostrum quidem ullam beatae adipisci assumenda. Ipsum.
+              Labore id, fugit quasi sequi autem at hic. Illo quidem dignissimos magnam itaque beatae minima nesciunt, quisquam cumque blanditiis. Pariatur quibusdam tenetur reprehenderit vitae, esse delectus doloribus. Illum, esse molestiae.
+              Dolores ipsam, eveniet minus distinctio vero, eius similique dignissimos reprehenderit a ea incidunt! Vitae, veniam quod! Natus error numquam totam fugiat enim, laboriosam molestiae sapiente facere illum placeat, quae doloribus?
+              Quisquam, sapiente nobis omnis ipsa, doloremque ipsam, tempora delectus eum perferendis nesciunt voluptatum quae adipisci fugiat cum sed consequuntur perspiciatis explicabo. Nisi, quia. Assumenda, sunt dicta laboriosam optio sed molestias.
+              Quae distinctio animi ducimus suscipit! Odit harum repudiandae obcaecati nisi quibusdam reiciendis modi eos recusandae! Eligendi ratione optio consectetur, sed quisquam cumque iusto vero rerum consequuntur impedit aliquam sint tempore.
+              Laudantium error fugiat at omnis excepturi amet distinctio a voluptate commodi laborum, corrupti maiores ea? Obcaecati culpa tempore, tempora, maxime ut ad quam, a commodi beatae ipsa delectus consequuntur exercitationem?
+              Commodi, eveniet assumenda adipisci consequatur deserunt quam aperiam laborum corrupti! Suscipit a culpa ipsa neque illum fugit animi excepturi similique magni. Autem sequi a veritatis saepe sit inventore harum corrupti!
             </p>
           </div>
         </div>
-        <div class="w-3/12">
+        <div class="lg:col-span-1">
           <div class="border-solid border border-gray-200 dark:border-none dark:bg-slate-800 rounded-xl px-4 py-6 mb-6">
-            <h1 class="text-black dark:text-white text-xl font-bold mb-6 ">🔗 Visita el proyecto</h1>
-            <a href="https://triviafun.netlify.app" target="_blank" class="container-image">
-              <div class="img-wrapper">
-                <img src="../../images/testing.jpeg" alt="triviafun">
-                <div class="content"></div>
-              </div>
+            <a 
+              class="text-black hover:text-blue-400 dark:hover:text-blue-400 dark:text-white text-xl font-bold mb-6" 
+              href="https://triviafun.netlify.app" 
+              target="_blank">
+              👉 Live preview
+            </a>
+          </div>
+          <div class="border-solid border border-gray-200 dark:border-none dark:bg-slate-800 rounded-xl px-4 py-6 mb-6">
+            <a 
+              class="text-black hover:text-blue-400 dark:hover:text-blue-400 dark:text-white text-xl font-bold mb-6 " 
+              href="https://github.com/d3vcloud/trivia-app" 
+              target="_blank">
+              👨‍💻 Repositorio
             </a>
           </div>
           <div class="border-solid border border-gray-200 dark:border-none dark:bg-slate-800 rounded-xl px-4 py-6 mb-6">
