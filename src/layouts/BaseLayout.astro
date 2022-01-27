@@ -3,12 +3,17 @@ import BaseHead from '../components/SEO/BaseHead.astro';
 import Navbar from '../components/UI/Navbar.astro';
 import Footer from '../components/UI/Footer.astro';
 
-const { title,description,lang } = Astro.props;
----
+export interface Props {
+	title: string;
+	description: string;
+}
 
-<html lang={lang || 'en'}>
+const { title,description } = Astro.props;
+---
+<html lang='es'>
 	<head>
 		<BaseHead {title} {description}/>
+		<link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
 		<script>
   		if (
   		  localStorage.getItem('color-theme') === 'dark' ||
@@ -21,16 +26,12 @@ const { title,description,lang } = Astro.props;
 				localStorage.setItem('color-theme','light');
 				document.documentElement.classList.remove('dark');
   		}
-
-			
 		</script>
 	</head>
 
 	<body class="dark:bg-slate-900 flex flex-col max-w-6xl mx-auto px-4 md:px-6">
     <Navbar />
-		<div class="wrapper">
-			<slot />
-		</div>
+		<slot />
 		<Footer />
 		<script>
 			const themeToggleDarkIcon = document.querySelector('#theme-toggle-dark-icon');
@@ -51,14 +52,14 @@ const { title,description,lang } = Astro.props;
 
 				if (colorTheme) {
 						
-						if (localStorage.getItem('color-theme') === 'light') {
-							document.documentElement.classList.add('dark');
-							localStorage.setItem('color-theme', 'dark');
-								
-						} else {
-							document.documentElement.classList.remove('dark');
-							localStorage.setItem('color-theme', 'light');
-						}
+					if (localStorage.getItem('color-theme') === 'light') {
+						document.documentElement.classList.add('dark');
+						localStorage.setItem('color-theme', 'dark');
+							
+					} else {
+						document.documentElement.classList.remove('dark');
+						localStorage.setItem('color-theme', 'light');
+					}
 				} 
 			});
 		</script>

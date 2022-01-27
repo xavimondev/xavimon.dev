@@ -3,12 +3,6 @@
   overflow: hidden;
 }
 
-/* .img-wrapper > img {
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-} */
-
 .img-wrapper > .content::after {
   position: absolute;
   content: url('../../public/assets/svg/icon-view.svg');

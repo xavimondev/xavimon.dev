@@ -1,28 +1,11 @@
 ---
 import Post from './Post.astro';
-const posts = [
-  {
-    id: 1,
-    title: 'new post 1',
-    description: 'new description 1',
-    slug: 'https//www.google.com'
-  },
-  {
-    id: 2,
-    title: 'new post 2',
-    description: 'new description 2',
-    slug: 'https//www.google.com'
-  },
-  {
-    id: 3,
-    title: 'new post 3',
-    description: 'new description 3',
-    slug: 'https//www.google.com'
-  }
-]
+// Data Fetching: List all Markdown Posts in the repo.
+let allPosts = await Astro.fetchContent('../../pages/posts/*.md');
+allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
 ---
 <section class="grid grid-cols-1">
   {
-    posts.map(({title,description}) => <Post title={title} description={description} />)
+    allPosts.map(p => <Post post={p} />)
   }
 </section>

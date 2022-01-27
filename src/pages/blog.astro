@@ -1,41 +1,17 @@
 ---
 // Component Imports
-import BaseHead from '../components/SEO/BaseHead.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/UI/Header.astro';
 import FilterPosts from '../components/Blog/FilterPosts.astro'
 import ListPosts from '../components/Blog/ListPosts.astro'
 
 const title = 'Blog';
-const description = 'My blog where you will find interesting articles and other things'
+const description = 'Tutoriales 👨‍💻, opiniones 🙋, noticias 📰 acerca de ciencia y tecnología, lo encontrarás en esta sección ⬇️';
 ---
-<html lang="en">
-<head>
-	<BaseHead {title} {description}/>
-	<link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
-
-</head>
-<body>
-	<BaseLayout {title} {description} lang='es'>
-		<Header title='Blog' description='Tutoriales 👨‍💻, opiniones 🙋, noticias 📰 acerca de ciencia y tecnología, lo encontrarás en esta sección ⬇️'/>
-		<main>
-			<FilterPosts />
-      <ListPosts />
-		</main>
-	</BaseLayout>
-	<!--<main>
-
-		
-
-		You can also use imported framework components directly in your markup!
-		
-		Note: by default, these components are NOT interactive on the client.
-		The `:visible` directive tells Astro to make it interactive.
-		
-		See https://docs.astro.build/core-concepts/component-hydration/ 
-
-		
-
-	</main>-->
-</body>
-</html>
+<BaseLayout title='xavimon.dev 👨‍💻 - Blog' description={description}>
+	<Header {title} {description}/>
+	<main>
+		<FilterPosts />
+    <ListPosts />
+	</main>
+</BaseLayout>
