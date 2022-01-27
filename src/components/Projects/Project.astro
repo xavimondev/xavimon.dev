@@ -1,5 +1,4 @@
 ---
-// import GitHubIconDark from '../../../public/assets/svg/github-dark.svg';
 import GitHubIcon from '../../../public/assets/svg/github.svg';
 import '../../styles/project.css';
 
@@ -8,12 +7,12 @@ export interface Props {
 }
 
 const { project } = Astro.props;
-const { title, description, url, linkRepository } = project;
+const { title, description, url, linkRepository, linkPreview } = project;
 ---
 
 <div class="transform hover:scale-[1.01] transition-all rounded-xl">
   <div class="bg-emerald-400 dark:bg-slate-800 rounded-lg overflow-hidden">
-    <a href={linkRepository} target="_blank">
+    <a href={linkPreview} target="_blank">
       <div class="img-wrapper">
         <img class="w-50 h-50" src="/images/testing.jpeg" alt="Mountain">
         <div class="content"></div>
@@ -26,7 +25,7 @@ const { title, description, url, linkRepository } = project;
       </p>
     </div>
     <div class="flex flex-row justify-between px-4 pt-4 pb-2">
-      <a class="inline-block" href="https://github.com/d3vcloud/trivia-app" target="_blank">
+      <a class="inline-block" href={linkRepository} target="_blank">
         <img src={GitHubIcon} alt="repository-link" width="25" height="25">
       </a>
       <a href={url} class="inline-block bg-gray-200 rounded-lg px-3 py-1 text-sm font-semibold text-gray-700 mb-2">Conocer más</a>

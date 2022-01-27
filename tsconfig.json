@@ -6,5 +6,8 @@
       "component:*": ["src/components/*.astro"],
       "layout:*": ["src/layouts/*.astro"]
     }
-  }
+  },
+  // "include": [
+  //   "types"
+  // ]
 }
