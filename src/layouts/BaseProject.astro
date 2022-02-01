@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import IconStack from '../components/Projects/IconStack.astro';
+import Breadcrumb from '../components/UI/Breadcrumb.astro';
 
 const { content } = Astro.props;
 const { title, description, stack, linkRepository, linkPreview } = content;
@@ -8,12 +9,7 @@ const { title, description, stack, linkRepository, linkPreview } = content;
 
 <BaseLayout {title} {description}>
   <section>
-    <nav class="dark:text-white">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item hover:text-blue-400 dark:hover:text-amber-400"><a href="/">Home</a></li>
-        <li class="breadcrumb-item dark:text-gray-400" aria-current="page">{title}</li>
-      </ol>
-    </nav>
+    <Breadcrumb title={title} option='Home' link='/'/>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
       <div class="lg:col-span-3">
         <h1 class="mb-6 text-3xl font-bold text-black md:text-4xl dark:text-white">{title}</h1>

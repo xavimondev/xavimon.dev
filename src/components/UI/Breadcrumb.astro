@@ -1,0 +1,15 @@
+---
+interface Props {
+  link: string;
+  option: string;
+  title: string;
+}
+
+const { link, title, option } = Astro.props
+---
+<nav class="text-black dark:text-white">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item font-semibold hover:text-blue-400 dark:hover:text-amber-400"><a href={link}>{option}</a></li>
+    <li class="breadcrumb-item text-gray-600 dark:text-gray-400" aria-current="page">{title}</li>
+  </ol>
+</nav>
