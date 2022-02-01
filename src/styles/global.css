@@ -65,7 +65,7 @@ code {
 pre::selection,
 code::selection {
 	text-shadow: none;
-	background: #b3d4fc;
+	background: #8b9aaa;
 }
 
 @media print {
@@ -85,15 +85,13 @@ pre {
 
 :not(pre) > code {
 	padding: 0.1em 0.3em;
-	color: #db4c69;
+	color: #9b2940 !important;
 	background: #f9f2f4;
 	border-radius: 0.3em;
 	white-space: pre-wrap;
 }
 
-/*********************************************************
-* Tokens
-*/
+/**********************Tokens****************/
 .namespace {
 	opacity: 0.7;
 }
@@ -134,7 +132,7 @@ pre {
 .language-css .token.string,
 .style .token.string {
 	color: #d4d4d4;
-	background: #2d3748;
+	/* background: #2d3748; */
 }
 
 .token.atrule,
@@ -215,9 +213,7 @@ pre {
 	color: #4ec9b0;
 }
 
-/*********************************************************
-* Language Specific
-*/
+/***********************Language Specific*************/
 pre[class*='language-javascript'],
 code[class*='language-javascript'] {
 	color: #4ec9b0;
@@ -237,9 +233,7 @@ code[class*='language-html'] {
 	color: #808080;
 }
 
-/*********************************************************
-* Line highlighting
-*/
+/*************************************Line highlighting************/
 pre[data-line] {
 	position: relative;
 }
