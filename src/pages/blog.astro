@@ -2,7 +2,7 @@
 // Component Imports
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/UI/Header.astro';
-import FilterPosts from '../components/Blog/FilterPosts.astro'
+// import FilterPosts from '../components/Blog/FilterPosts.astro'
 import ListPosts from '../components/Blog/ListPosts.astro'
 
 const title = 'Blog';
@@ -11,7 +11,7 @@ const description = 'Tutoriales, opiniones, noticias acerca de ciencia y tecnolo
 <BaseLayout title='xavimon.dev 👨‍💻 - Blog' description={description}>
 	<Header {title} {description}/>
 	<main>
-		<FilterPosts />
+		<!-- <FilterPosts /> -->
     <ListPosts />
 	</main>
 </BaseLayout>
