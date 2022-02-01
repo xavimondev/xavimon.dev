@@ -7,7 +7,7 @@ const { title, description, publishDate } = content;
 ---
 
 <BaseLayout {title} {description}>
-  <section class="flex flex-col items-center">
+  <section class="flex flex-col mx-3 lg:items-center md:items-center md:mx-0 lg:mx-0">
     <div>
       <Breadcrumb title={title} option='Blog' link='/blog'/>
       <h1 class="mb-6 text-3xl font-bold text-black md:text-4xl dark:text-white">{title}</h1>
