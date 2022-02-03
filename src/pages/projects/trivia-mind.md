@@ -7,11 +7,11 @@ linkRepository: https://github.com/d3vcloud/trivia-app
 linkPreview: https://triviafun.netlify.app
 ---
 
-![Trivia](/images/projects/triviamind-question.png)
+![Trivia](/images/projects/triviamind-question.jpeg)
 
 Triviamind te ofrece 12 categorías y 3 niveles de dificultad. Cada una cuenta con 10 preguntas que te permirán saber que tanto sabes de un tema específico. Si eres un experto en todas las materias, entonces la primera categoría es la idónea para ti pero ten cuidado 👀 porque a pesar del nivel te encontrarás con preguntas nuncas antes vistas.
 
-![Home Triviamind](/images/projects/triviamind-index.png)
+![Home Triviamind](/images/projects/triviamind-index.jpeg)
 
 ## Motivación
 

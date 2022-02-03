@@ -7,7 +7,7 @@ description:
     con NodeJS podremos acceder a todas las características que nos provee el SDK de Amazon.'
 ---
 En la actualidad tenemos varios servicios de almacenamiento como S3, Cloudinary, Google Drive, Mega, etc. Para el siguiente tutorial usaremos S3 y aprovecharemos que Amazon nos brinda durante un año servicios gratuitos que forman parte de su **Free Tier**.
-![Free Tier](/images/posts/free-tier.png)
+![Free Tier](/images/posts/free-tier.jpeg)
 
 Como podemos ver, Amazon nos ofrece 5GB de almacenamiento en su capa gratuita y este le suma 20,000 peticiones GET y 2,000 peticiones PUT.
 Si consideras que la quota es pequeña, podrias ampliarla, pero ten en cuenta que te cobrarian dinero extra.
@@ -22,7 +22,7 @@ Antes de empezar con el código, te mostraré algunas definiciones claves en el 
 Para cargar archivos usando el SDK de Amazon, necesitamos de credenciales que nos brindarán acceso a los buckets que creemos en S3. Todo este procedimiento lo realizaremos en la [consola de administración de Amazon](https://aws.amazon.com/console/), como mencioné antes, estaré haciendo uso de la capa gratuita.
 
 Una vez dentro de la consola, nos dirigimos al servicio IAM y veremos la siguiente pantalla:
-![IAM Console](/images/posts/iam-console.png)
+![IAM Console](/images/posts/iam-console.jpeg)
 
 Nos dirigimos a **Políticas** y alli dentro realizamos lo siguiente:
 
@@ -34,7 +34,7 @@ Nos dirigimos a **Políticas** y alli dentro realizamos lo siguiente:
 6. Por último, pulsamos en **Crear**.
 
 Nuestra política quedará como la imagen:
-![Creation Policy](/images/posts/final-step-policy.png)
+![Creation Policy](/images/posts/final-step-policy.jpeg)
 
 Culminada la creación de nuestra política, procedemos a crear un usuario. Para eso nos dirigimos a **Usuarios** y realizamos lo siguiente:
 
@@ -243,15 +243,15 @@ Como notaste, estamos haciendo uso del ACCESS_KEY y SECRET_KEY que nos brindó A
 En este punto ya tenemos configurado la lógica para cargar una imagen asi que vamos a probarlo. Estaré usando postman para testear nuestro endpoint.
 
 Primeramente, quiero asegurarme que al no enviar un archivo en la petición me muestre el mensaje de error definido en el middleware.
-![Error upload file](/images/posts/error-upload.png)
+![Error upload file](/images/posts/error-upload.jpeg)
 
 Como podemos ver, al hacer una petición sin enviar archivos, el middleware hace su trabajo mostrándonos *No files were uploaded*
 
 Ahora subiremos un archivo a nuestro bucket en S3, realizamos la misma petición
-![Uploading file](/images/posts/upload-file.png)
+![Uploading file](/images/posts/upload-file.jpeg)
 
 Al ingresar a nuestro bucket, observamos lo siguiente
-![File uploaded](/images/posts/result-upload.png)
+![File uploaded](/images/posts/result-upload.jpeg)
 
 Nuestro archivo ha sido cargado satisfactoriamente 🚀 
 
