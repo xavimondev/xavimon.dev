@@ -1,98 +1,87 @@
-import JavascriptIcon from 'public/assets/svg/javascript.svg';
-import CSSIcon from 'public/assets/svg/css.svg';
-import AstroIcon from 'public/assets/svg/astro.svg';
-import HTMLIcon from 'public/assets/svg/html.svg';
-import FirebaseIcon from 'public/assets/svg/firebase.svg';
-import MongoDBIcon from 'public/assets/svg/mongodb.svg';
-import MySQLIcon from 'public/assets/svg/mysql.svg';
-import NodeIcon from 'public/assets/svg/nodejs.svg';
-import ReactIcon from 'public/assets/svg/react.svg';
-import TailwindIcon from 'public/assets/svg/tailwindcss.svg';
-import ViteIcon from 'public/assets/svg/vitejs.svg';
-import TypescriptIcon from 'public/assets/svg/typescript.svg';
+const path = process.env.NODE_ENV === 'production' ? '/assets/svg' : '/public/assets/svg';
 
 type Information = {
   url: string;
-  icon: any
+  urlSvg: string;
 }
 
 function getInformationTool(tool: string){
   let information: Information = {
     url: '',
-    icon: null
+    urlSvg: ''
   }
 
   switch(tool){
     case 'HTML':
       information = {
         url: 'https://htmlreference.io/',
-        icon: HTMLIcon,
+        urlSvg: `${path}/html.svg`,
       }
       break;
     case 'CSS':
       information = {
         url: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-        icon: CSSIcon
+        urlSvg: `${path}/css.svg`
       }
       break;
     case 'JavaScript':
       information = {
         url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-        icon: JavascriptIcon
+        urlSvg: `${path}/javascript.svg`
       }
       break;
     case 'Astro':
       information = {
         url: 'https://docs.astro.build/',
-        icon: AstroIcon
+        urlSvg: `${path}/astro.svg`
       }
       break;
     case 'Firebase':
       information = {
         url: 'https://firebase.google.com/',
-        icon: FirebaseIcon
+        urlSvg: `${path}/firebase.svg`
       }
       break;
     case 'MongoDB':
       information = {
         url: 'https://www.mongodb.com/atlas/database',
-        icon: MongoDBIcon
+        urlSvg: `${path}/mongodb.svg`
       }
       break;
     case 'MySQL':
       information = {
         url: 'https://www.mongodb.com/atlas/database',
-        icon: MySQLIcon
+        urlSvg: `${path}/mysql.svg`
       }
       break;
     case 'Node':
       information = {
         url: 'https://nodejs.org/en/',
-        icon: NodeIcon
+        urlSvg: `${path}/nodejs.svg`
       }
       break;
     case 'React':
       information = {
         url: 'https://reactjs.org/',
-        icon: ReactIcon
+        urlSvg: `${path}/react.svg`
       }
       break;
     case 'Tailwind':
       information = {
         url: 'https://tailwindcss.com/',
-        icon: TailwindIcon
+        urlSvg: `${path}/tailwindcss.svg`
       }
       break;
     case 'Vite':
       information = {
         url: 'https://vitejs.dev/',
-        icon: ViteIcon
+        urlSvg: `${path}/vitejs.svg`
       }
       break;
     case 'Typescript':
       information = {
         url: 'https://www.typescriptlang.org/',
-        icon: TypescriptIcon
+        urlSvg: `${path}/typescript.svg`
       }
       break;
   }
