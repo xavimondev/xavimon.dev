@@ -1,5 +1,4 @@
 ---
-import GitHubIcon from '../../../public/assets/svg/github.svg';
 import '../../styles/project.css';
 
 export interface Props {
@@ -8,6 +7,7 @@ export interface Props {
 
 const { project } = Astro.props;
 const { title, description, url, linkRepository, linkPreview } = project;
+const path = process.env.NODE_ENV === 'production' ? '/assets/svg/github.svg' : '/public/assets/svg/github.svg';
 ---
 
 <div class="transform hover:scale-[1.01] transition-all rounded-xl">
@@ -26,7 +26,7 @@ const { title, description, url, linkRepository, linkPreview } = project;
     </div>
     <div class="flex flex-row justify-between px-4 pt-4 pb-2">
       <a class="inline-block" href={linkRepository} target="_blank">
-        <img src={GitHubIcon} alt="repository-link" width="25" height="25">
+        <img src={path} alt="repository-link" width="25" height="25">
       </a>
       <a href={url} class="inline-block bg-gray-200 rounded-lg px-3 py-1 text-sm font-semibold text-gray-700 mb-2">Conocer más</a>
     </div>
