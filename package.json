@@ -1,7 +1,7 @@
 {
-  "name": "xavimon.blog",
+  "name": "xavimon.dev",
   "description": "My website where I publish a lot of content about technology",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -9,6 +9,7 @@
     "build": "astro build",
     "preview": "astro preview"
   },
+  "author": "Xavi Alfaro",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.0",
     "astro": "^0.22.10",
