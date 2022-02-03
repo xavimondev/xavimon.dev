@@ -9,6 +9,7 @@ import NodeIcon from '../../public/assets/svg/nodejs.svg';
 import ReactIcon from '../../public/assets/svg/react.svg';
 import TailwindIcon from '../../public/assets/svg/tailwindcss.svg';
 import ViteIcon from '../../public/assets/svg/vitejs.svg';
+import TypescriptIcon from '../../public/assets/svg/typescript.svg';
 
 type Information = {
   url: string;
@@ -86,6 +87,12 @@ function getInformationTool(tool: string){
       information = {
         url: 'https://vitejs.dev/',
         icon: ViteIcon
+      }
+      break;
+    case 'Typescript':
+      information = {
+        url: 'https://www.typescriptlang.org/',
+        icon: TypescriptIcon
       }
       break;
   }
