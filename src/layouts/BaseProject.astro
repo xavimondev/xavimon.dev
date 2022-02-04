@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import IconStack from '../components/Projects/IconStack.astro';
-import Breadcrumb from '../components/UI/Breadcrumb.astro';
+import BaseLayout from 'layout:BaseLayout';
+import IconStack from 'component:Projects/IconStack';
+import Breadcrumb from 'component:UI/Breadcrumb';
 
 const { content } = Astro.props;
 const { title, description, stack, linkRepository, linkPreview } = content;
