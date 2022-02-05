@@ -5,6 +5,7 @@ description: Herramienta que te permite convertir fácilmente una expresión cro
 stack: [HTML,CSS,JavaScript,Vite]
 linkRepository: https://github.com/d3vcloud/cronmagic-app
 linkPreview: https://cronmagic.netlify.app
+image: /images/projects/cronmagic-index.jpeg
 ---
 
 ![Cronmagic generator](/images/projects/cronmagic-index.jpeg)

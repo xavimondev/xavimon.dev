@@ -5,6 +5,7 @@ description: Genera frases motivacionales y compartelas con tu comunidad de form
 stack: [React,Vite,Typescript]
 linkRepository: https://github.com/d3vcloud/quotes-app/
 linkPreview: https://quoteyu.netlify.app/
+image: /images/projects/quoteyu-index.jpeg
 ---
 
 ![quoteyu](/images/projects/quoteyu-index.jpeg)

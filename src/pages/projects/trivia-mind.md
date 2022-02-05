@@ -5,6 +5,7 @@ description: Diviertete con Triviamind poniendo a prueba tus conocimientos. Podr
 stack: [React,Vite,Typescript]
 linkRepository: https://github.com/d3vcloud/trivia-app
 linkPreview: https://triviafun.netlify.app
+image: /images/projects/triviamind-question.jpeg
 ---
 
 ![Trivia](/images/projects/triviamind-question.jpeg)

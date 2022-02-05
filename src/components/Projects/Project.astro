@@ -6,7 +6,7 @@ export interface Props {
 }
 
 const { project } = Astro.props;
-const { title, description, url, linkRepository, linkPreview } = project;
+const { title, description, url, linkRepository, linkPreview, image } = project;
 const path = process.env.NODE_ENV === 'production' ? '/assets/svg/github.svg' : '/public/assets/svg/github.svg';
 ---
 
@@ -14,7 +14,7 @@ const path = process.env.NODE_ENV === 'production' ? '/assets/svg/github.svg' : 
   <div class="bg-emerald-400 dark:bg-slate-800 rounded-lg overflow-hidden">
     <a href={linkPreview} target="_blank">
       <div class="img-wrapper">
-        <img class="object-cover" src="/images/projects/triviamind-question.jpeg" alt={title}>
+        <img class="object-cover" src={image} alt={title}>
         <div class="content"></div>
       </div>
     </a>
