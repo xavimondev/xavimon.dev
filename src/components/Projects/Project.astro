@@ -1,6 +1,4 @@
 ---
-import '../../styles/project.css';
-
 interface Props {
   project: any;
 }
@@ -9,6 +7,29 @@ const { project } = Astro.props;
 const { title, description, url, linkRepository, linkPreview, image } = project;
 const path = process.env.NODE_ENV === 'production' ? '/assets/svg/github.svg' : '/public/assets/svg/github.svg';
 ---
+
+<style>
+  .img-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .img-wrapper > .content::after {
+    position: absolute;
+    content: url('/public/assets/svg/icon-view.svg');
+    inset: 0;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
+    opacity: 0;
+  }
+
+  .img-wrapper:hover > .content::after {
+    opacity: 1;
+  }
+</style>
 
 <div class="flex flex-col justify-between bg-emerald-400 dark:bg-slate-800 rounded-lg overflow-hidden h-full transform hover:scale-[1.01] transition-all">
   <a href={linkPreview} target="_blank">
