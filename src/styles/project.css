@@ -5,7 +5,7 @@
 
 .img-wrapper > .content::after {
   position: absolute;
-  content: url('../../public/assets/svg/icon-view.svg');
+  content: url('/public/assets/svg/icon-view.svg');
   inset: 0;
   background-color: hsla(178, 100%, 50%, 0.5);
   display: flex;
