@@ -5,7 +5,6 @@ interface Props {
 
 const { project } = Astro.props;
 const { title, description, url, linkRepository, linkPreview, image } = project;
-const path = process.env.NODE_ENV === 'production' ? '/assets/svg/github.svg' : '/public/assets/svg/github.svg';
 ---
 
 <style>
@@ -16,7 +15,7 @@ const path = process.env.NODE_ENV === 'production' ? '/assets/svg/github.svg' : 
 
   .img-wrapper > .content::after {
     position: absolute;
-    content: url('/public/assets/svg/icon-view.svg');
+    content: url('/assets/svg/icon-view.svg');
     inset: 0;
     background-color: hsla(178, 100%, 50%, 0.5);
     display: flex;
@@ -46,7 +45,7 @@ const path = process.env.NODE_ENV === 'production' ? '/assets/svg/github.svg' : 
   </div>
   <div class="flex flex-row justify-between px-4 pt-4 pb-2">
     <a class="inline-block" href={linkRepository} target="_blank">
-      <img src={path} alt="repository-link" width="25" height="25">
+      <img src='/assets/svg/github.svg' alt="repository-link" width="25" height="25">
     </a>
     <a href={url} class="inline-block bg-gray-200 rounded-lg px-3 py-1 text-sm font-semibold text-gray-700 mb-2">Conocer más</a>
   </div>
