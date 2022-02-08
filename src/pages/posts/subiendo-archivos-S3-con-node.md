@@ -203,7 +203,7 @@ const upload = async (req,res) => {
 };
 
 module.exports = {
-    upload
+  upload
 }
 ```
 Definimos la función **upload()** que recibe la request y response y en el cuerpo de la función estamos obteniendo el archivo que nos envia el cliente, además, tenemos una constante bucket que tiene el nombre de nuestro bucket en S3. Como puedes ver estos datos son enviados a una funcion **uploadToBucket()** cuyo objetivo es enviar nuestros archivos a S3.
