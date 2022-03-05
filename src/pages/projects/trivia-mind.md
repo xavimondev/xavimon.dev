@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BaseProject.astro
-title: Triviamind
+title: triviamind
 description: Diviertete con Triviamind poniendo a prueba tus conocimientos. Podrás obtener un 10/10 ? 
 stack: [React,Vite,Typescript]
 linkRepository: https://github.com/d3vcloud/trivia-app
