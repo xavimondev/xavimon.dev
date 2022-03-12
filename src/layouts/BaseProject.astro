@@ -19,7 +19,7 @@ const { title, description, stack, linkRepository, linkPreview } = content;
       </div>
       <div class="lg:relative col-span-1">
         <div class="w-full lg:w-[270px] lg:fixed">
-          <div class="border-solid border border-gray-200 dark:border-none dark:bg-slate-800 rounded-xl px-4 py-6 mb-6">
+          <div class="border-solid border border-gray-200 dark:border-none dark:bg-gray-700 rounded-xl px-4 py-6 mb-6">
             <a 
               class="text-black hover:text-blue-400 dark:hover:text-blue-400 dark:text-white text-xl font-bold mb-6" 
               href={linkPreview}
@@ -27,7 +27,7 @@ const { title, description, stack, linkRepository, linkPreview } = content;
               👉 Live preview
             </a>
           </div>
-          <div class="border-solid border border-gray-200 dark:border-none dark:bg-slate-800 rounded-xl px-4 py-6 mb-6">
+          <div class="border-solid border border-gray-200 dark:border-none dark:bg-gray-700 rounded-xl px-4 py-6 mb-6">
             <a 
               class="text-black hover:text-blue-400 dark:hover:text-blue-400 dark:text-white text-xl font-bold mb-6 " 
               href={linkRepository} 
@@ -35,7 +35,7 @@ const { title, description, stack, linkRepository, linkPreview } = content;
               👨‍💻 Repositorio
             </a>
           </div>
-          <div class="border-solid border border-gray-200 dark:border-none dark:bg-slate-800 rounded-xl px-4 py-6 mb-6">
+          <div class="border-solid border border-gray-200 dark:border-none dark:bg-gray-700 rounded-xl px-4 py-6 mb-6">
             <h1 class="text-black dark:text-white text-xl font-bold mb-6">🚀 Stack</h1>
             {
               stack.map(t => <IconStack tool={t}/>)
