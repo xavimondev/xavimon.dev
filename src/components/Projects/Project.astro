@@ -30,7 +30,8 @@ const { title, description, url, linkRepository, linkPreview, image } = project;
   }
 </style>
 
-<div class="flex flex-col justify-between bg-emerald-400 dark:bg-gray-700 rounded-lg overflow-hidden h-full transform hover:scale-[1.01] transition-all">
+<div class="flex flex-col justify-between border-solid border border-gray-300 
+        dark:border-none dark:bg-gray-700 rounded-lg overflow-hidden h-full transform hover:scale-[1.01] transition-all">
   <a href={linkPreview} target="_blank">
     <div class="img-wrapper h-[160px]">
       <img class="object-cover h-full w-full" src={image} alt={title}>
@@ -38,7 +39,7 @@ const { title, description, url, linkRepository, linkPreview, image } = project;
     </div>
   </a>
   <div class="px-4 py-4">
-    <div class="text-xl text-black dark:text-white mb-4 font-semibold">{title}</div>
+    <div class="text-xl text-transparent bg-clip-text bg-gradient-to-br from-[#ff1361] to-[#caca41] dark:text-white mb-4 font-semibold">{title}</div>
     <p class="text-gray-900 dark:text-gray-400 text-sm">
       {description}
     </p>
@@ -47,6 +48,8 @@ const { title, description, url, linkRepository, linkPreview, image } = project;
     <a class="inline-block" href={linkRepository} target="_blank">
       <img src='/assets/svg/github.svg' alt="repository-link" width="25" height="25">
     </a>
-    <a href={url} class="inline-block bg-gray-200 rounded-lg px-3 py-1 text-sm font-semibold text-gray-700 mb-2">Conocer más</a>
+    <a href={url} class="inline-block py-1 text-sm font-semibold  mb-2 bg-gray-200 
+        bg-gradient-to-r hover:from-[#fc6d9d] hover:to-[#fcfc84] 
+        rounded-lg px-3 text-gray-700 hover:text-slate-900">Conocer más</a>
   </div>
 </div>
