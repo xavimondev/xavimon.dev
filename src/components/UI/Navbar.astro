@@ -4,60 +4,45 @@ const baseClass = 'font-bold px-3 py-2 rounded-md text-base'
 const bgClass = `${baseClass} text-orange-600`;
 const withOutBgClass = `${baseClass} text-black dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700`;
 ---
-<nav class="mb-10 mt-4">
-  <div class="flex justify-between">
-    <div class="flex-shrink-0 flex items-center">
-      <a class="font-bold text-lg" href="/">👨‍💻 <span class="user-page">xavimon.dev</span>
-        <!-- <svg class='stroke-2'>
-          <text x='35%' y='15%' fill='transparent' text-anchor='middle'>
-            xavimon.dev
-          </text>
-          <defs>
-            <linearGradient id="mygradient">
-              <stop offset="0%" stop-color="#F60" />
-              <stop offset="100%" stop-color="#FF6" />
-            </linearGradient>
-          </defs>
-        </svg> -->
-      </a>
-    </div>
-    <div class="flex space-x-4">
-      <a href="/" 
-        class={ option === 'home' ? bgClass: withOutBgClass }>Home</a>
-      <a href="/blog" 
-        class={ option === 'blog' ? bgClass: withOutBgClass }>Blog</a>
-    </div>
-    <div>
-      <button
-        aria-label="Toggle Dark Mode"
-        type="button"
-        id="btnToggle"
-        class="w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all">
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            class="w-5 h-5 text-black dark:text-gray-200"
-          >
-          <path
-            class="hidden"
-            id="theme-toggle-dark-icon"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth='2'
-            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-          />
-          <path
-            class="hidden"
-            id="theme-toggle-light-icon"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                  />
-        </svg>
-      </button>
-    </div>
+<nav class="flex justify-between items-center h-14 px-4 mb-10 mt-4 sticky top-0 z-10 bg-gray-100 dark:bg-slate-900 rounded-md">
+   <div class="flex-shrink-0 flex items-center">
+    <a class="font-bold text-lg" href="/"><span class="user-page">xavimon.dev</span>
+    </a>
   </div>
+  <div class="flex space-x-4">
+    <a href="/" 
+      class={ option === 'home' ? bgClass: withOutBgClass }>Home</a>
+    <a href="/blog" 
+      class={ option === 'blog' ? bgClass: withOutBgClass }>Blog</a>
+  </div>
+  <button
+    aria-label="Toggle Dark Mode"
+    type="button"
+    id="btnToggle"
+    class="w-9 h-9 bg-gray-300 rounded-lg dark:bg-gray-600 flex items-center justify-center hover:ring-2 ring-gray-300 transition-all">
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        class="w-5 h-5 text-black dark:text-gray-200"
+      >
+      <path
+        class="hidden"
+        id="theme-toggle-dark-icon"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth='2'
+        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+      />
+      <path
+        class="hidden"
+        id="theme-toggle-light-icon"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+      />
+    </svg>
+  </button>
 </nav>
