@@ -6,9 +6,10 @@ import Footer from 'component:UI/Footer';
 export interface Props {
 	title: string;
 	description: string;
+	option: string;
 }
 
-const { title,description } = Astro.props;
+const { title,description, option } = Astro.props;
 ---
 <html lang='es'>
 	<head>
@@ -30,7 +31,7 @@ const { title,description } = Astro.props;
 	</head>
 
 	<body class="dark:bg-[#232635] flex flex-col max-w-6xl mx-auto px-4 md:px-6">
-    <Navbar />
+    <Navbar {option}/>
 		<slot />
 		<Footer />
 		<script>

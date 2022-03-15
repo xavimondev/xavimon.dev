@@ -307,3 +307,8 @@ pre[class*='language-bash'] .token.function {
 .token.comment {
 	color: #fff7;
 }
+
+/*MENU MOBILE RESPONSIVE*/
+.fab:hover + .fab-options, .fab-options:hover {
+	opacity: 1;
+}

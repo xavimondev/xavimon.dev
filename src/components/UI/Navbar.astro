@@ -1,4 +1,9 @@
-
+---
+const { option } = Astro.props;
+const baseClass = 'text-black font-bold dark:text-gray-300 px-3 py-2 rounded-md text-base'
+const bgClass = `${baseClass} bg-gray-300 dark:bg-gray-700`;
+const withOutBgClass = `${baseClass} hover:bg-gray-300 dark:hover:bg-gray-700`;
+---
 <nav class="mb-10 mt-4">
   <div class="flex justify-between">
     <div class="flex-shrink-0 flex items-center">
@@ -18,8 +23,9 @@
     </div>
     <div class="flex space-x-4">
       <a href="/" 
-        class="text-black font-bold hover:bg-gray-300 dark:hover:bg-gray-700 dark:text-gray-300 px-3 py-2 rounded-md text-base" aria-current="page">Home</a>
-      <a href="/blog" class="text-black hover:bg-gray-300 font-bold dark:text-gray-300 dark:hover:bg-gray-700 px-3 py-2 rounded-md text-base">Blog</a>
+        class={ option === 'home' ? bgClass: withOutBgClass }>Home</a>
+      <a href="/blog" 
+        class={ option === 'blog' ? bgClass: withOutBgClass }>Blog</a>
     </div>
     <div>
       <button

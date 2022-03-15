@@ -7,8 +7,8 @@ import ListPosts from 'component:Blog/ListPosts';
 const title = 'Blog';
 const description = 'Tutoriales, opiniones, noticias acerca de ciencia y tecnología lo encontrarás en esta sección ⬇️';
 ---
-<BaseLayout title='xavimon.dev 👨‍💻 - Blog' description={description}>
-	<Header {title} {description}/>
+<BaseLayout title='xavimon.dev 👨‍💻 - Blog' description={description} option='blog'>
+	<Header {title} {description} />
 	<main>
 		<!-- <FilterPosts /> -->
     <ListPosts />
